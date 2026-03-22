@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Vanguard — Exclusive Proposal for Lumière Wellness Studio</title>
+  <meta name="description" content="Exclusive web design proposal from Web Vanguard for Lumière Wellness Studio — Luxury Spa Dubai" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A0A0A;
+      --bg2: #111111;
+      --bg3: #161616;
+      --gold: #C9A96E;
+      --gold-light: #E8D5A3;
+      --white: #FFFFFF;
+      --gray: #888888;
+      --border: rgba(201,169,110,0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* RTL support */
+    html[dir="rtl"] body { font-family: 'Inter', sans-serif; }
+    html[dir="rtl"] .section-label::before { display: none; }
+    html[dir="rtl"] .section-label::after { content: ''; width: 30px; height: 1px; background: var(--gold); }
+    html[dir="rtl"] .hero-eyebrow .line { display: none; }
+    html[dir="rtl"] .pricing-table td, html[dir="rtl"] .pricing-table th { text-align: right; }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: #0A0A0A;
+    }
+
+    .logo-text {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+    .logo-sub {
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-badge {
+      background: rgba(201,169,110,0.1);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.25rem;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* LANGUAGE TOGGLE */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--gray);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.9rem;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .lang-btn.active {
+      background: var(--gold);
+      color: #0A0A0A;
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--gold);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-eyebrow .line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 9vw, 7.5rem);
+      font-style: italic;
+      font-weight: 700;
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      color: var(--gold-light);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--gray);
+      max-width: 550px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 12px;
+      color: var(--gray);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-meta strong { color: var(--gold); font-weight: 600; }
+    .hero-meta .dot { color: var(--border); }
+
+    .hero-plan-box {
+      border: 1px solid var(--border);
+      padding: 1.5rem 3rem;
+      background: rgba(201,169,110,0.05);
+      margin-bottom: 2rem;
+    }
+
+    .hero-plan-label {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-plan-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .hero-demo-link {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      border-bottom: 1px solid rgba(201,169,110,0.4);
+      padding-bottom: 2px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .hero-demo-link:hover {
+      color: var(--gold-light);
+      border-color: var(--gold);
+    }
+
+    /* SECTIONS */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 5rem 2rem; }
+
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: rgba(201,169,110,0.07);
+      line-height: 1;
+      margin-bottom: -1rem;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-desc {
+      color: var(--gray);
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 700px;
+    }
+
+    /* PAGES GRID */
+    .pages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .page-card {
+      border: 1px solid var(--border);
+      background: var(--bg2);
+      padding: 2rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .page-card:hover {
+      border-color: rgba(201,169,110,0.4);
+      background: var(--bg3);
+    }
+
+    .page-card .page-icon { font-size: 2rem; margin-bottom: 1rem; }
+
+    .page-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .page-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.7; }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      background: var(--bg2);
+    }
+
+    .feature-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+    .feature-text h4 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .feature-text p { font-size: 0.8rem; color: var(--gray); }
+
+    /* PRICING TABLE */
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 3rem;
+    }
+
+    .pricing-table th {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gray);
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pricing-table td {
+      padding: 1.1rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+      vertical-align: top;
+    }
+
+    .pricing-table tr.highlight td {
+      background: rgba(201,169,110,0.06);
+    }
+
+    .plan-name { font-weight: 700; color: var(--white); }
+
+    .plan-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .plan-badge {
+      display: inline-block;
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      background: var(--gold);
+      color: #0A0A0A;
+      padding: 0.2rem 0.5rem;
+      margin-left: 0.5rem;
+      font-weight: 700;
+      vertical-align: middle;
+    }
+
+    .plan-desc { font-size: 0.85rem; color: var(--gray); }
+
+    /* CTA */
+    .cta-section {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-section h2 em { font-style: italic; color: var(--gold); }
+    .cta-section p { color: var(--gray); max-width: 500px; margin: 0 auto 3rem; }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #25D366;
+      color: white;
+      padding: 1.125rem 2.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-whatsapp:hover { background: #20BA5A; transform: translateY(-2px); }
+
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 1.125rem 2.5rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .btn-demo:hover {
+      border-color: var(--gold);
+      background: rgba(201,169,110,0.08);
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    hr.divider-full {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.8rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header { padding: 1rem; }
+      .header-badge { display: none; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      section { padding: 4rem 1.5rem; }
+      .hero-plan-box { padding: 1.25rem 1.5rem; }
+      .pricing-table td:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo">
+      <div class="logo-mark">W</div>
+      <div>
+        <span class="logo-text">Web Vanguard</span>
+        <span class="logo-sub">Dubai's Digital Agency</span>
+      </div>
+    </a>
+    <div class="header-right">
+      <div class="header-badge" data-en="Exclusive Proposal" data-ar="عرض حصري">Exclusive Proposal</div>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+        <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">AR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span class="line"></span>
+      <span data-en="Exclusive proposal for" data-ar="عرض حصري لـ">Exclusive proposal for</span>
+      <span class="line"></span>
+    </div>
+
+    <h1>Lumière Wellness Studio</h1>
+
+    <p class="hero-tagline" data-en="A luxury spa website, built for you." data-ar="موقع سبا فاخر، مصمم خصيصاً لك.">A luxury spa website, built for you.</p>
+
+    <div class="hero-meta">
+      <span data-en="March 2026" data-ar="مارس 2026">March 2026</span>
+      <span class="dot">·</span>
+      <strong data-en="Recommended Plan: Growth — AED 4,500" data-ar="الخطة الموصى بها: Growth — 4,500 درهم">Recommended Plan: Growth — AED 4,500</strong>
+      <span class="dot">·</span>
+      <span data-en="Valid 30 days" data-ar="صالح لمدة 30 يوماً">Valid 30 days</span>
+    </div>
+
+    <div class="hero-plan-box">
+      <div class="hero-plan-label" data-en="Recommended Plan" data-ar="الخطة الموصى بها">Recommended Plan</div>
+      <div class="hero-plan-value">Growth — AED 4,500</div>
+    </div>
+
+    <a href="https://lumiere-wellness.vercel.app" class="hero-demo-link" target="_blank" data-en="View Live Demo →" data-ar="مشاهدة الديمو المباشر ←">View Live Demo →</a>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- 01 — HERO SECTION -->
+  <section>
+    <div class="container">
+      <div class="section-number">01</div>
+      <div class="section-label" data-en="First Impression" data-ar="الانطباع الأول">First Impression</div>
+      <h2 class="section-title" data-en="Hero — <em>Luxury</em> First Impression" data-ar="هيرو — انطباع أول <em>فاخر</em>">Hero — <em>Luxury</em> First Impression</h2>
+      <p class="section-desc" data-en="A full-screen hero with cinematic imagery evoking calm and indulgence. Playfair Display italic headline, a refined tagline, and two calls-to-action: 'Book a Treatment' and 'Explore Services'. Subtle golden particle animation creates an atmosphere of exclusivity that resonates instantly with the clientele of a luxury wellness studio in Dubai." data-ar="هيرو بملء الشاشة بصور سينمائية تبعث الهدوء والرفاهية. عنوان بخط Playfair Display المائل، شعار راقٍ، وزرَّا دعوة للتصرف: 'احجز علاجاً' و'استعرض الخدمات'. تخلق رسوم الجزيئات الذهبية الدقيقة أجواءً من التميز.">A full-screen hero with cinematic imagery evoking calm and indulgence. Playfair Display italic headline, a refined tagline, and two calls-to-action: 'Book a Treatment' and 'Explore Services'. Subtle golden particle animation creates an atmosphere of exclusivity that resonates instantly with the clientele of a luxury wellness studio in Dubai.</p>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- 02 — SERVICES -->
+  <section>
+    <div class="container">
+      <div class="section-number">02</div>
+      <div class="section-label" data-en="Signature Treatments" data-ar="العلاجات المميزة">Signature Treatments</div>
+      <h2 class="section-title" data-en="Services — <em>Treatment Menu</em> with AED Pricing" data-ar="الخدمات — <em>قائمة العلاجات</em> بالأسعار">Services — <em>Treatment Menu</em> with AED Pricing</h2>
+      <p class="section-desc" data-en="An elegant treatment menu with AED pricing for each service, beautifully typeset. Each treatment card features a brief description, duration, and price — with a 'Book Now' button. Designed to feel like a high-end spa menu, not a generic website." data-ar="قائمة علاجات أنيقة بالأسعار بالدرهم الإماراتي. كل بطاقة علاج تحتوي على وصف مختصر، مدة الجلسة، والسعر مع زر 'احجز الآن'.">An elegant treatment menu with AED pricing for each service, beautifully typeset. Each treatment card features a brief description, duration, and price — with a 'Book Now' button. Designed to feel like a high-end spa menu, not a generic website.</p>
+      <div class="pages-grid">
+        <div class="page-card">
+          <div class="page-icon">🌿</div>
+          <h3 data-en="Signature Rituals" data-ar="الطقوس المميزة">Signature Rituals</h3>
+          <p data-en="Full-body rituals using premium organic oils. From AED 650 / 90 min." data-ar="طقوس كاملة للجسم بالزيوت العضوية. من 650 درهم / 90 دقيقة.">Full-body rituals using premium organic oils. From AED 650 / 90 min.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-icon">💆</div>
+          <h3 data-en="Deep Tissue Therapy" data-ar="العلاج بالضغط العميق">Deep Tissue Therapy</h3>
+          <p data-en="Therapeutic massage targeting chronic tension. AED 450 / 60 min." data-ar="تدليك علاجي يستهدف التوتر المزمن. 450 درهم / 60 دقيقة.">Therapeutic massage targeting chronic tension. AED 450 / 60 min.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-icon">✨</div>
+          <h3 data-en="Facial & Glow Treatments" data-ar="علاجات الوجه والإشراق">Facial & Glow Treatments</h3>
+          <p data-en="Luxury facials with Dermalogica and La Mer protocols. From AED 550." data-ar="جلسات تجميل فاخرة بمنتجات Dermalogica وLa Mer. من 550 درهم.">Luxury facials with Dermalogica and La Mer protocols. From AED 550.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-icon">🧖‍♀️</div>
+          <h3 data-en="Hammam & Scrubs" data-ar="الحمام والتقشير">Hammam & Scrubs</h3>
+          <p data-en="Traditional Arabian hammam with gold-infused scrubs. AED 380 / 45 min." data-ar="حمام عربي تقليدي مع تقشير ذهبي. 380 درهم / 45 دقيقة.">Traditional Arabian hammam with gold-infused scrubs. AED 380 / 45 min.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- 03 — ABOUT -->
+  <section>
+    <div class="container">
+      <div class="section-number">03</div>
+      <div class="section-label" data-en="Our Story" data-ar="قصتنا">Our Story</div>
+      <h2 class="section-title" data-en="About — <em>Story</em> & Philosophy" data-ar="عن الاستوديو — <em>القصة</em> والفلسفة">About — <em>Story</em> & Philosophy</h2>
+      <p class="section-desc" data-en="A beautifully crafted split-screen About section: your brand story on one side, an aspirational image of the studio on the other. Includes philosophy pillars — Authenticity, Intention, and Transformation — each with a short description. This section creates emotional connection and trust before the client ever steps through your door." data-ar="قسم 'عن الاستوديو' جميل التصميم بتخطيط مقسوم: قصة علامتك من جهة، وصورة استوديو ملهمة من الجهة الأخرى. يشمل ركائز الفلسفة — الأصالة، النية، والتحول — مع وصف مختصر لكل منها.">A beautifully crafted split-screen About section: your brand story on one side, an aspirational image of the studio on the other. Includes philosophy pillars — Authenticity, Intention, and Transformation — each with a short description. This section creates emotional connection and trust before the client ever steps through your door.</p>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- 04 — GALLERY -->
+  <section>
+    <div class="container">
+      <div class="section-number">04</div>
+      <div class="section-label" data-en="Visual Showcase" data-ar="المعرض البصري">Visual Showcase</div>
+      <h2 class="section-title" data-en="Gallery — <em>The Art</em> of the Space" data-ar="المعرض — <em>فن</em> المكان">Gallery — <em>The Art</em> of the Space</h2>
+      <p class="section-desc" data-en="An asymmetric masonry gallery showcasing the studio's interiors, treatment rooms, and details. Hover animations reveal soft golden overlays. Each image is curated to evoke serenity and luxury — because a picture sells a feeling, and a feeling sells a booking." data-ar="معرض صور غير متماثل يعرض داخل الاستوديو، غرف العلاج، والتفاصيل. تُظهر تأثيرات التحويم طبقات ذهبية ناعمة. كل صورة مختارة بعناية لاستحضار السكينة والفخامة.">An asymmetric masonry gallery showcasing the studio's interiors, treatment rooms, and details. Hover animations reveal soft golden overlays. Each image is curated to evoke serenity and luxury — because a picture sells a feeling, and a feeling sells a booking.</p>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- 05 — CONTACT -->
+  <section>
+    <div class="container">
+      <div class="section-number">05</div>
+      <div class="section-label" data-en="Book Your Experience" data-ar="احجز تجربتك">Book Your Experience</div>
+      <h2 class="section-title" data-en="Contact — Booking Form + <em>WhatsApp</em> + Maps" data-ar="التواصل — نموذج الحجز + <em>واتساب</em> + الخرائط">Contact — Booking Form + <em>WhatsApp</em> + Maps</h2>
+      <p class="section-desc" data-en="A conversion-optimized contact section with a booking inquiry form (treatment type, preferred date/time, name, contact), an embedded Google Map showing your studio location, and a floating WhatsApp button for instant connection. Clients can reach you in one tap from any device." data-ar="قسم تواصل محسّن للتحويل مع نموذج استفسار حجز (نوع العلاج، التاريخ/الوقت المفضل، الاسم، التواصل)، خريطة Google مضمّنة، وزر واتساب عائم للتواصل الفوري.">A conversion-optimized contact section with a booking inquiry form (treatment type, preferred date/time, name, contact), an embedded Google Map showing your studio location, and a floating WhatsApp button for instant connection. Clients can reach you in one tap from any device.</p>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- FEATURES -->
+  <section style="background: var(--bg2);">
+    <div class="container">
+      <div class="section-label" data-en="Everything Included" data-ar="كل شيء مشمول">Everything Included</div>
+      <h2 class="section-title" data-en="Features <em>included</em>" data-ar="المميزات <em>المشمولة</em>">Features <em>included</em></h2>
+      <p class="section-desc" data-en="No hidden extras. Every feature built and delivered from day one." data-ar="لا إضافات مخفية. كل ميزة تُبنى وتُسلَّم من اليوم الأول.">No hidden extras. Every feature built and delivered from day one.</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <div class="feature-text">
+            <h4 data-en="Mobile-First Design" data-ar="تصميم يبدأ بالجوال">Mobile-First Design</h4>
+            <p data-en="Perfect on every device. 80% of your clients book from their phone." data-ar="مثالي على كل جهاز. 80% من عملائك يحجزون من هواتفهم.">Perfect on every device. 80% of your clients book from their phone.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-text">
+            <h4 data-en="SEO Optimized" data-ar="محسّن لمحركات البحث">SEO Optimized</h4>
+            <p data-en="Show up when someone searches 'luxury spa Dubai' or 'best massage Dubai'." data-ar="اظهر عند البحث عن 'سبا فاخر دبي' أو 'أفضل مساج دبي'.">Show up when someone searches 'luxury spa Dubai' or 'best massage Dubai'.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <div class="feature-text">
+            <h4 data-en="WhatsApp Button" data-ar="زر واتساب">WhatsApp Button</h4>
+            <p data-en="Floating button always visible — clients book instantly without calling." data-ar="زر عائم دائم الظهور — يحجز العملاء فوراً دون الحاجة للاتصال.">Floating button always visible — clients book instantly without calling.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📧</div>
+          <div class="feature-text">
+            <h4 data-en="Contact Form" data-ar="نموذج التواصل">Contact Form</h4>
+            <p data-en="Booking inquiries delivered straight to your inbox. Never miss a lead." data-ar="استفسارات الحجز تصل مباشرة إلى بريدك. لا تفوّت أي عميل.">Booking inquiries delivered straight to your inbox. Never miss a lead.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div class="feature-text">
+            <h4 data-en="Google Analytics" data-ar="تحليلات جوجل">Google Analytics</h4>
+            <p data-en="Full GA4 tracking from day one. Know your visitors, sources, and conversions." data-ar="تتبع GA4 كامل من اليوم الأول. اعرف زوارك ومصادرهم وتحويلاتهم.">Full GA4 tracking from day one. Know your visitors, sources, and conversions.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🤖</div>
+          <div class="feature-text">
+            <h4 data-en="AI SEO (llms.txt)" data-ar="تحسين الذكاء الاصطناعي">AI SEO (llms.txt)</h4>
+            <p data-en="Optimized to appear in ChatGPT, Perplexity and AI-powered search results." data-ar="محسّن للظهور في ChatGPT وPerplexity ونتائج البحث بالذكاء الاصطناعي.">Optimized to appear in ChatGPT, Perplexity and AI-powered search results.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏗️</div>
+          <div class="feature-text">
+            <h4 data-en="Structured Data" data-ar="البيانات المنظمة">Structured Data</h4>
+            <p data-en="Schema.org SpaOrBeauty JSON-LD. Google understands exactly what you offer." data-ar="JSON-LD من Schema.org. جوجل يفهم تماماً ما تقدمه.">Schema.org SpaOrBeauty JSON-LD. Google understands exactly what you offer.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">
+            <h4 data-en="Fast Loading" data-ar="تحميل سريع">Fast Loading</h4>
+            <p data-en="Under 2 seconds on mobile. Google rewards fast sites with better rankings." data-ar="أقل من ثانيتين على الجوال. جوجل يكافئ المواقع السريعة بترتيب أفضل.">Under 2 seconds on mobile. Google rewards fast sites with better rankings.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-text">
+            <h4 data-en="Google Maps" data-ar="خرائط جوجل">Google Maps</h4>
+            <p data-en="Embedded map so clients find your studio location instantly." data-ar="خريطة مضمّنة ليجد العملاء موقع استوديوك فوراً.">Embedded map so clients find your studio location instantly.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-text">
+            <h4 data-en="Favicon" data-ar="أيقونة الموقع">Favicon</h4>
+            <p data-en="Custom SVG favicon with your brand identity. Details that build credibility." data-ar="أيقونة SVG مخصصة بهوية علامتك. التفاصيل تبني المصداقية.">Custom SVG favicon with your brand identity. Details that build credibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- PRICING -->
+  <section>
+    <div class="container">
+      <div class="section-label" data-en="Investment" data-ar="الاستثمار">Investment</div>
+      <h2 class="section-title" data-en="Pricing — <em>Choose Your Plan</em>" data-ar="الأسعار — <em>اختر خطتك</em>">Pricing — <em>Choose Your Plan</em></h2>
+      <p class="section-desc" data-en="One-time investment. No monthly fees. No surprises. Your website, forever." data-ar="استثمار لمرة واحدة. لا رسوم شهرية. لا مفاجآت. موقعك، للأبد.">One-time investment. No monthly fees. No surprises. Your website, forever.</p>
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th data-en="Plan" data-ar="الخطة">Plan</th>
+            <th data-en="Price" data-ar="السعر">Price</th>
+            <th data-en="What's included" data-ar="ما يشمله">What's included</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="plan-name" data-en="Starter" data-ar="المبتدئ">Starter</span></td>
+            <td><span class="plan-price">AED 1,500</span></td>
+            <td><span class="plan-desc" data-en="1-page landing, WhatsApp, basic SEO, mobile" data-ar="صفحة واحدة، واتساب، SEO أساسي، جوال">1-page landing, WhatsApp, basic SEO, mobile</span></td>
+          </tr>
+          <tr>
+            <td><span class="plan-name" data-en="Launch" data-ar="الإطلاق">Launch</span></td>
+            <td><span class="plan-price">AED 2,500</span></td>
+            <td><span class="plan-desc" data-en="Multi-page, contact form, WhatsApp, full SEO, GA4" data-ar="متعدد الصفحات، نموذج تواصل، واتساب، SEO كامل، GA4">Multi-page, contact form, WhatsApp, full SEO, GA4</span></td>
+          </tr>
+          <tr class="highlight">
+            <td><span class="plan-name" data-en="Growth" data-ar="النمو">Growth</span> <span class="plan-badge" data-en="Recommended" data-ar="موصى به">Recommended</span></td>
+            <td><span class="plan-price">AED 4,500</span></td>
+            <td><span class="plan-desc" data-en="Launch + 3 months support, Analytics, AI SEO" data-ar="إطلاق + 3 أشهر دعم، تحليلات، SEO بالذكاء الاصطناعي">Launch + 3 months support, Analytics, AI SEO</span></td>
+          </tr>
+          <tr>
+            <td><span class="plan-name" data-en="Premium" data-ar="المميز">Premium</span></td>
+            <td><span class="plan-price">AED 8,000+</span></td>
+            <td><span class="plan-desc" data-en="Growth + Google Ads, content strategy, monthly reporting" data-ar="نمو + إعلانات جوجل، استراتيجية محتوى، تقارير شهرية">Growth + Google Ads, content strategy, monthly reporting</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="divider-full" />
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="section-label" style="justify-content:center;" data-en="Ready to begin?" data-ar="مستعد للبدء؟">Ready to begin?</div>
+    <h2 data-en="Let's make it <em>happen</em>" data-ar="لنجعل ذلك <em>حقيقة</em>">Let's make it <em>happen</em></h2>
+    <p data-en="Your website will be live in 7 business days. The Dubai wellness market is waiting." data-ar="موقعك سيكون مباشراً خلال 7 أيام عمل. سوق العافية في دبي ينتظر.">Your website will be live in 7 business days. The Dubai wellness market is waiting.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/971501234567?text=Hi%2C%20I%20saw%20the%20Web%20Vanguard%20proposal%20for%20Lumi%C3%A8re%20Wellness%20Studio%20and%20I%27d%20like%20to%20get%20started" class="btn-whatsapp" target="_blank">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span data-en="Contact via WhatsApp" data-ar="تواصل عبر واتساب">Contact via WhatsApp</span>
+      </a>
+      <a href="https://lumiere-wellness.vercel.app" class="btn-demo" target="_blank" data-en="View Live Demo →" data-ar="مشاهدة الديمو المباشر ←">View Live Demo →</a>
+    </div>
+    <p style="margin-top:2rem;font-size:0.8rem;color:rgba(255,255,255,0.3);">
+      Web Vanguard · Dubai Digital Agency · webvanguardai.github.io
+    </p>
+  </section>
+
+  <footer>
+    <span data-en="© 2026 Web Vanguard. All rights reserved. Exclusive proposal for Lumière Wellness Studio." data-ar="© 2026 Web Vanguard. جميع الحقوق محفوظة. عرض حصري لـ Lumière Wellness Studio.">© 2026 Web Vanguard. All rights reserved. Exclusive proposal for Lumière Wellness Studio.</span>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const html = document.documentElement;
+      html.lang = lang;
+      html.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      // Toggle active button
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text) {
+          // Use innerHTML to support <em> tags inside translations
+          el.innerHTML = text;
+        }
+      });
+
+      // Store preference
+      localStorage.setItem('wv-lang', lang);
+    }
+
+    // Init on load
+    (function() {
+      const saved = localStorage.getItem('wv-lang');
+      if (saved && saved === 'ar') {
+        setLang('ar');
+      }
+    })();
+  </script>
+
+</body>
+</html>
